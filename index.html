@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NASA</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      href="https://www.nasa.gov/sites/all/themes/custom/nasatwo/images/nasa-logo.svg"
+    />
+  </head>
+
+  <body>
+    <div
+      class="modal modal-sheet justify-content-center align-items-center"
+      tabindex="-1"
+      role="dialog"
+      id="modalSheet"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content rounded-4 shadow">
+          <div
+            class="modal-header border-bottom-0 text-center d-flex justify-content-center"
+          >
+            <h1 class="modal-title">Welcome to <span>NASA</span></h1>
+          </div>
+          <div class="modal-body py-0">
+            <p class="text-center">
+              This is a website about NASA. You can learn about the missions,
+              news and topics. You can also see the world, the moon, and mars.
+              Enjoy!
+            </p>
+          </div>
+          <div class="modal-footer flex-column border-top-0">
+            <button
+              type="button"
+              class="btn-accept btn btn-lg btn-danger w-100 mx-0 mb-2"
+              data-dismiss="modal"
+            >
+              Continue
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="htmlbodywrapper">
+      <div class="wrapper">
+        <h1 class="vectro">
+          <span class="vectro-body">NASA</span><span class="vectro-red">I</span
+          ><span class="vectro-green">I</span><span class="vectro-blue">I</span>
+        </h1>
+      </div>
+      <div class="containerWorld"></div>
+      <div class="contentMain">
+        <div class="left">
+          <div class="news" onclick="setMoon();loadApollo()">
+            <h1>News: <span>Off to the Moon!</span></h1>
+            <p id="apollo11"><span>CLICK ME!</span></p>
+          </div>
+          <a class="text-decoration-none" href="./about.html">
+            <button
+              class="about text-start"
+              type="button"
+              data-toggle="modal"
+              data-target="#exampleModalCenter"
+            >
+              <h1>About</h1>
+              <p>
+                NASA stands for National Aeronautics and Space Administration.
+                NASA is a U.S. government agency that is responsible for science
+                and technology related to air and space. The Space Age started
+                in 1957 with the launch of the Soviet satellite Sputnik.
+              </p>
+            </button>
+          </a>
+        </div>
+        <div class="right">
+          <div class="missions" onclick="setMars();loadMars()">
+            <h1>Missions</h1>
+            <p id="mars"><span>CLICK ME!</span></p>
+          </div>
+          <a class="text-decoration-none" href="./topics.html">
+            <div class="topics">
+              <h1>Topics</h1>
+              <p>
+                Many people know something about NASA’s work. But most probably
+                have no idea about how many different things the agency does.
+                Astronauts in orbit conduct scientific research. Satellites help
+                scientists learn more about Earth.
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Planets in ThreeJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/96/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/r16/Stats.min.js"></script>
+    <script src="./WorldModel/orbitControlls.js"></script>
+    <script src="./WorldModel/ascii-renderer.js"></script>
+
+    <!-- Bootstrap and jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- My Scripts -->
+    <script type="text/javascript" src="./Scripts/script.js "></script>
+    <script type="text/javascript" src="./Scripts/jQ.js"></script>
+    <script type="text/javascript" src="./Scripts/ajax.js"></script>
+  </body>
+</html>
